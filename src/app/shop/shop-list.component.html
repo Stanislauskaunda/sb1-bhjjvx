@@ -1,0 +1,10 @@
+<ActionBar title="Shops" class="action-bar"></ActionBar>
+
+<ListView [items]="shops" class="list-group">
+  <ng-template let-shop="item">
+    <StackLayout class="list-group-item">
+      <Label [text]="shop.name" class="list-group-item-heading"></Label>
+      <Label [text]="shop.address" class="list-group-item-text"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>

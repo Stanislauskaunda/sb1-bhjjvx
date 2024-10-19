@@ -1,0 +1,10 @@
+<ActionBar title="Products" class="action-bar"></ActionBar>
+
+<ListView [items]="products" class="list-group">
+  <ng-template let-product="item">
+    <GridLayout columns="*, auto" class="list-group-item">
+      <Label [text]="product.name" class="list-group-item-heading" col="0"></Label>
+      <Label [text]="'$' + product.price.toFixed(2)" class="list-group-item-text price" col="1"></Label>
+    </GridLayout>
+  </ng-template>
+</ListView>

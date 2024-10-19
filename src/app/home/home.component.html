@@ -1,0 +1,14 @@
+<ActionBar title="Pamalonda" class="action-bar"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="page">
+    <StackLayout class="card">
+      <Label text="Welcome to Pamalonda" class="title"></Label>
+      <Label text="Compare prices, create grocery lists, and save money!" textWrap="true" class="subtitle"></Label>
+    </StackLayout>
+    <Button text="Shops" [nsRouterLink]="['/shops']" class="btn btn-primary m-t-20"></Button>
+    <Button text="Products" [nsRouterLink]="['/products']" class="btn btn-primary m-t-10"></Button>
+    <Button text="Grocery List" [nsRouterLink]="['/grocery-list']" class="btn btn-primary m-t-10"></Button>
+    <Button text="Savings" [nsRouterLink]="['/savings']" class="btn btn-primary m-t-10 m-b-20"></Button>
+  </StackLayout>
+</ScrollView>

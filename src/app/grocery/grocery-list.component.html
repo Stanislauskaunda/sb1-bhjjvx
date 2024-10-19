@@ -1,0 +1,17 @@
+<ActionBar title="Grocery List" class="action-bar"></ActionBar>
+
+<GridLayout rows="auto, *" class="page p-10">
+  <GridLayout row="0" columns="*, auto" class="form m-b-10">
+    <TextField col="0" hint="Add item" class="input input-border" [(ngModel)]="newItemName"></TextField>
+    <Button col="1" text="Add" (tap)="addItem()" class="btn btn-primary"></Button>
+  </GridLayout>
+
+  <ListView row="1" [items]="groceryItems" class="list-group">
+    <ng-template let-item="item">
+      <GridLayout columns="*, auto" class="list-group-item">
+        <Label [text]="item.name" class="list-group-item-heading" col="0"></Label>
+        <Button text="Remove" (tap)="removeItem(item.id)" class="btn btn-outline" col="1"></Button>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>
